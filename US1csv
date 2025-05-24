@@ -1,0 +1,4 @@
+#!/bin/bash
+in=$1
+out=$2
+grep -v "#" ${in} | awk '{printf("%s,%s\n"),$1,$2}' > ${out}
